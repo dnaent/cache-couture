@@ -1,0 +1,79 @@
+---
+# Caché chip utility LoRA — Qwen Image, 12 GB VRAM tier (RTX 3080 Ti)
+#
+# Utility LoRA. Teaches the Qwen Image base to render the Caché microchip
+# symbol mark (CLAUDE.md §2.1 — square silhouette with pin protrusions on
+# all four sides and internal circuit pattern) as tonal embroidery,
+# reflective yarn, woven label patch, or engraved hardware on garment
+# label surfaces. Stacked at 0.5–0.7 strength on top of face + garment
+# LoRAs when inpainting the chip on a label (CLAUDE.md §11.3, §16.4).
+#
+# Single config — there is only one chip, so no per-instance renderer.
+# Edit this file directly. If a second utility LoRA is ever added, promote
+# both to a template + render_utility_configs.py pair.
+#
+# Dataset: brand/chip/training_set/  (populated by scripts/bootstrap_chip.py)
+# Trigger: cache_chip
+# Target: ComfyUI/models/loras/cache/utility/cache_chip.safetensors
+
+job: extension
+config:
+  name: "cache_chip"
+  process:
+    - type: 'sd_trainer'
+      training_folder: "C:\\Users\\Yoshii\\cache_couture\\outputs\\loras\\utility"
+      device: cuda:0
+      trigger_word: "cache_chip"
+      network:
+        type: "lora"
+        linear: 16
+        linear_alpha: 16
+      save:
+        dtype: float16
+        save_every: 250
+        max_step_saves_to_keep: 4
+      datasets:
+        - folder_path: "C:\\Users\\Yoshii\\cache_couture\\brand\\chip\\training_set"
+          caption_ext: "txt"
+          caption_dropout_rate: 0.05
+          shuffle_tokens: false
+          cache_latents_to_disk: true
+          resolution: [ 512, 768 ]
+      train:
+        batch_size: 1
+        cache_text_embeddings: true
+        steps: 1200
+        gradient_accumulation: 1
+        train_unet: true
+        train_text_encoder: false
+        gradient_checkpointing: true
+        noise_scheduler: "flowmatch"
+        optimizer: "adamw8bit"
+        lr: 1e-4
+        dtype: bf16
+      model:
+        name_or_path: "Qwen/Qwen-Image"
+        arch: "qwen_image"
+        quantize: true
+        qtype: "uint3|ostris/accuracy_recovery_adapters/qwen_image_torchao_uint3.safetensors"
+        quantize_te: true
+        qtype_te: "qfloat8"
+        low_vram: true
+      sample:
+        sampler: "flowmatch"
+        sample_every: 250
+        width: 768
+        height: 768
+        prompts:
+          - "[trigger], small tonal black-on-black embroidered chip emblem on a matte black garment label, macro close-up, soft even diffused light, magazine grade"
+          - "[trigger], small reflective silver yarn chip emblem on a matte black inner waistband label, low-key rim light catching the reflective threads, macro"
+          - "[trigger], engraved gunmetal plate chip emblem on a black sleeve cuff, close-up, soft top-down studio light"
+          - "[trigger], woven black-on-black chip emblem patch on a back-pocket label, three-quarter angle, ultra-detailed weave texture"
+        neg: "wordmark, text characters, letters, alphabet, large logo, saturated colours, neon, bright background, vibrant, sunset lighting, visible logo text, watermark, harsh shadows, low resolution, AI artefacts, cluttered background, props"
+        seed: 42
+        walk_seed: true
+        guidance_scale: 3
+        sample_steps: 20
+meta:
+  name: "cache_chip"
+  version: '1.0'

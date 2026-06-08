@@ -1,0 +1,50 @@
+# === DNAENT lean-repo .gitignore ===
+# Large binary assets live on Windows + Google Drive, NOT in git.
+# (Mac has limited storage; keep clones lightweight.)
+
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.vscdb
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Node
+node_modules/
+
+# Secrets / local env
+.env
+.env.*
+*.key
+*.pem
+
+# Logs / temp
+*.log
+*.tmp
+*~
+
+# --- Adobe source files (ignored: kept on Drive) ---
+*.psd
+*.psb
+*.ai
+*.ai~
+*.eps
+*.indd
+
+# --- Video (ignored: kept on Drive) ---
+*.mov
+*.mp4
+*.avi
+*.mkv
+*.m4v
+*.wmv
+
+# NOTE: raster images (.png/.jpg/.jpeg/.webp) and .pdf ARE committed.

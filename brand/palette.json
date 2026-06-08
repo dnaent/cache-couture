@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-05-19",
+  "source": "CLAUDE.md §2.3",
+  "rules": {
+    "monochrome_only": true,
+    "spot_colour_allowed_when": "asset is tied to a phygital/metaverse moment",
+    "iridescent_treatment": "rendered material highlight, never a flat colour swatch"
+  },
+  "palette": [
+    {
+      "role": "stealth_black",
+      "hex": "#000000",
+      "use": "Primary garment colour, type, chip mark"
+    },
+    {
+      "role": "off_black",
+      "hex": "#0A0A0A",
+      "use": "Photography backdrop low-key, secondary mass"
+    },
+    {
+      "role": "studio_white",
+      "hex": "#F4F2EE",
+      "use": "Marketing background (warm off-white)"
+    },
+    {
+      "role": "bone",
+      "hex": "#FAFAF7",
+      "use": "Hi-key alt background"
+    },
+    {
+      "role": "gunmetal",
+      "hex": "#2A2D31",
+      "use": "Hardware accents, reflective callouts"
+    },
+    {
+      "role": "iridescent_reflective",
+      "hex": null,
+      "use": "Highlights on yarn, membranes, NFC label points. Rendered, not flat."
+    }
+  ]
+}

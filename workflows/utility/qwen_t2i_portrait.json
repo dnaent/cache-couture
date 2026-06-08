@@ -1,0 +1,88 @@
+{
+  "_meta": {
+    "name": "Caché — Qwen Image text-to-image portrait",
+    "purpose": "Pure t2i Qwen Image generation. Used to mint new source portraits for cast slots when no operator-supplied reference exists. Orchestrators substitute prompt (node 6), negative (node 7), seed (node 8), and filename_prefix (node 10).",
+    "owner": "scripts/generate_m03_source.py (one-shot)",
+    "stack": "Qwen Image fp8 + Qwen Lightning 4-step LoRA + qwen_2.5_vl_7b_fp8 + qwen_image_vae",
+    "speed_note": "Lightning LoRA at 1.0 enables 4-step / cfg 1.0. ~30-60 s per render on a 3080 Ti at 1024 px."
+  },
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "qwen_image_fp8_e4m3fn.safetensors",
+      "weight_dtype": "fp8_e4m3fn"
+    }
+  },
+  "11": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": ["1", 0],
+      "lora_name": "Qwen-Image-Lightning-4steps-V1.0.safetensors",
+      "strength_model": 1.0
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    }
+  },
+  "5": {
+    "class_type": "EmptySD3LatentImage",
+    "inputs": {
+      "width": 832,
+      "height": 1248,
+      "batch_size": 1
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": ["2", 0],
+      "text": "PLACEHOLDER_POSITIVE"
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "clip": ["2", 0],
+      "text": "PLACEHOLDER_NEGATIVE"
+    }
+  },
+  "8": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": ["11", 0],
+      "seed": 0,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": ["6", 0],
+      "negative": ["7", 0],
+      "latent_image": ["5", 0],
+      "denoise": 1.0
+    }
+  },
+  "9": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": ["8", 0],
+      "vae": ["3", 0]
+    }
+  },
+  "10": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": ["9", 0],
+      "filename_prefix": "cache/portraits/PLACEHOLDER_PREFIX"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+---
+job: extension
+config:
+  name: "cache_face_m06"
+  process:
+    - type: 'sd_trainer'
+      training_folder: "C:\\Users\\Yoshii\\cache_couture\\outputs\\loras\\faces"
+      device: cuda:0
+      trigger_word: "m06_face"
+      network:
+        type: "lora"
+        linear: 16
+        linear_alpha: 16
+      save:
+        dtype: float16
+        save_every: 250
+        max_step_saves_to_keep: 4
+        # Final LoRA promoted to the ComfyUI registry by hand or by a future
+        # scripts/finalize_face_lora.py — target is
+        # ComfyUI/models/loras/cache/c1_faces/cache_face_m##.safetensors.
+        # Do not point training_folder at the ComfyUI dir directly, the
+        # intermediate checkpoints would pollute the registry.
+      datasets:
+        - folder_path: "C:\\Users\\Yoshii\\cache_couture\\brand\\models\\M06\\training_set"
+          caption_ext: "txt"
+          caption_dropout_rate: 0.05
+          shuffle_tokens: false
+          cache_latents_to_disk: true
+          resolution: [ 512, 768 ]
+      train:
+        batch_size: 1
+        cache_text_embeddings: true
+        steps: 1500
+        gradient_accumulation: 1
+        train_unet: true
+        train_text_encoder: false
+        gradient_checkpointing: true
+        noise_scheduler: "flowmatch"
+        optimizer: "adamw8bit"
+        lr: 1e-4
+        dtype: bf16
+      model:
+        name_or_path: "Qwen/Qwen-Image"
+        arch: "qwen_image"
+        quantize: true
+        qtype: "uint3|ostris/accuracy_recovery_adapters/qwen_image_torchao_uint3.safetensors"
+        quantize_te: true
+        qtype_te: "qfloat8"
+        low_vram: true
+      sample:
+        sampler: "flowmatch"
+        sample_every: 250
+        width: 768
+        height: 768
+        prompts:
+          - "[trigger], editorial fashion photography, Caché Couture, stealth black streetwear, warm off-white seamless studio backdrop, soft even diffused front fill, full body frontal stance, hands at sides, neutral expression, frame from head to feet, matte technical fabrics, gunmetal hardware, 35mm, magazine grade"
+          - "[trigger], portrait, head and shoulders, neutral expression, warm off-white seamless studio backdrop, soft even diffused front fill, 35mm, magazine grade"
+          - "[trigger], full body, three-quarter angle, black cropped hoodie and black wide sweatpants, warm off-white seamless backdrop, soft diffused light"
+        neg: "saturated colours, neon, bright background, vibrant, sunset lighting, visible logo text, watermark, harsh shadows, low resolution, plastic skin, AI artefacts, extra fingers, distorted face, warped hands, cluttered background, props, motion blur, sepia, vintage filter"
+        seed: 42
+        walk_seed: true
+        guidance_scale: 3
+        sample_steps: 20
+meta:
+  name: "cache_face_m06"
+  version: '1.0'

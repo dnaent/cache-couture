@@ -1,0 +1,97 @@
+{
+  "_meta": {
+    "name": "Caché — Qwen Image Edit bootstrap",
+    "purpose": "Identity- or garment-preserving Qwen Image Edit pass. Orchestrators substitute LoadImage.image, both TextEncodeQwenImageEdit prompts, KSampler.seed, and SaveImage.filename_prefix per render. Used for face / garment / chip bootstraps.",
+    "owner": "scripts/bootstrap_faces.py, scripts/bootstrap_garments.py, scripts/bootstrap_chip.py",
+    "stack": "Qwen Image Edit fp8 + Qwen Lightning 4-step LoRA + qwen_2.5_vl_7b_fp8 + qwen_image_vae",
+    "speed_note": "Lightning LoRA at strength 1.0 enables 4-step / cfg 1.0 inference (~30–60 s per render on a 3080 Ti 12 GB at ~1024 px). Without Lightning (set node 11 strength_model to 0 and bump node 8 steps/cfg back to 20/2.5), expect ~10 min per render at native source resolution."
+  },
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "qwen_image_edit_fp8_e4m3fn.safetensors",
+      "weight_dtype": "fp8_e4m3fn"
+    }
+  },
+  "11": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": ["1", 0],
+      "lora_name": "Qwen-Image-Lightning-4steps-V1.0.safetensors",
+      "strength_model": 1.0
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "PLACEHOLDER_SOURCE.jpg"
+    }
+  },
+  "5": {
+    "class_type": "VAEEncode",
+    "inputs": {
+      "pixels": ["4", 0],
+      "vae": ["3", 0]
+    }
+  },
+  "6": {
+    "class_type": "TextEncodeQwenImageEdit",
+    "inputs": {
+      "clip": ["2", 0],
+      "prompt": "PLACEHOLDER_POSITIVE",
+      "vae": ["3", 0],
+      "image": ["4", 0]
+    }
+  },
+  "7": {
+    "class_type": "TextEncodeQwenImageEdit",
+    "inputs": {
+      "clip": ["2", 0],
+      "prompt": "PLACEHOLDER_NEGATIVE",
+      "vae": ["3", 0],
+      "image": ["4", 0]
+    }
+  },
+  "8": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": ["11", 0],
+      "seed": 0,
+      "steps": 4,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": ["6", 0],
+      "negative": ["7", 0],
+      "latent_image": ["5", 0],
+      "denoise": 1.0
+    }
+  },
+  "9": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": ["8", 0],
+      "vae": ["3", 0]
+    }
+  },
+  "10": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": ["9", 0],
+      "filename_prefix": "cache/bootstrap/PLACEHOLDER_PREFIX"
+    }
+  }
+}

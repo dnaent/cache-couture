@@ -1,0 +1,7 @@
+# Caché phygital service — Shopify webhook → NFT mint → supplier fulfillment.
+# CLAUDE.md §13.8: Python (FastAPI) for APIs; Firebase Functions for glue.
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+pydantic-settings==2.7.1
+httpx==0.28.1

@@ -90,6 +90,9 @@ uniqueness is digital, not per-card. (Woven chip-mark + reflective label become 
 - **Cut-and-sew apparel OEM — STILL TO SOURCE** — makes the Tag hoodie/joggers/tees and sews in
   Neon's labels. Needs: heavyweight 100% cotton, accepts brand-supplied reflective labels, low MOQ.
 - Flow: Neon produces labels → ships to each garment maker (Kangduo + apparel OEM) → sewn in.
+- **Accessories (premium OEM tier, all Guangdong, batch + 3PL):** keyrings (metal OEM), socks (sock OEM
+  or Printful POD), duffle / messenger bags / pouches (bag/luggage OEM), utility storage vests (cut-and-sew
+  apparel OEM). Lighters dropped (hazmat shipping). Full table + sourcing steps: `docs/launch_checklist.md`.
 
 **Status of open items:**
 1. ✅ Reflective label scope = **Tag/mask premium tier only**; Core/Gradient/Japan use standard

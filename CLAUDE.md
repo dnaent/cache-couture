@@ -109,13 +109,38 @@ Strict outerwear, heavy weights. Voluminous hooded puffer jackets, longline puff
 
 ## 4. Materiality & Construction Cues
 
-When generating product imagery or marketing visuals, reinforce these material signatures but not all at once, mix & match these features, be playful but consistent:
-- Matte-on-matte black weaves.
-- Sherpa fleece / bouclé textures.
-- Technical nylon ripstop and softshell.
-- **Subtle reflectivity:** black-out reflective yarn, iridescent seam membranes, gunmetal zipper pulls and hardware. Activated only at specific light angles — never high-vis.
-- Tonal embroidered or reflective wordmark label on chest, sleeve, internal pocket or back pocket (small, off-centre, never large logos).
-- Hidden inner labels that double as the NFC/SKU touchpoint.
+Ratified 2026-06-29. Brand fabric strategy = **premium but accessible**: spend on the touchpoints
+a customer feels and sees (weight, hardware, deep-black dye, trims, packaging) and economise on the
+unseen substrate (synthetic fills, blends, linings). Fabric is mapped to the `-ware` tiers (§3) — when
+generating product imagery or marketing visuals, use the materials for that tier; mix & match within a
+tier, never put synthetics on a Dailyware cotton piece.
+
+#### Tier material map (drives product specs AND ComfyUI/marketing generation)
+
+| Tier | Garment | Material / weight |
+|---|---|---|
+| **Dailyware** (signature) | Tees | **100% heavyweight cotton**, 240–260 GSM combed ring-spun single jersey, garment-dyed black |
+| | Tracksuits (hooded top + matching bottoms) | **100% heavyweight cotton**, 380–420 GSM brushed-back loopback / French terry |
+| **Lightware** (entry / transitional) | Lightweight tees, crops | 180–210 GSM cotton or cotton/modal |
+| | Track jackets, shorts | matte nylon-taslan / peached poly shell, or poly-elastane 4-way stretch knit |
+| | Lightweight balaclava | fine-gauge merino-blend knit |
+| **Darkware** (outerwear, top tier) | Puffer jackets / longline / gilets | matte recycled-nylon or ripstop shell + **recycled polyester wadding (~80–120 g)** (not down) |
+| | Softshell / tech jackets | poly-spandex softshell bonded to micro-fleece |
+| | Heavy fleece quarter-zips | poly polar-fleece or sherpa |
+| | Utility cargos | cotton-nylon ripstop twill, DWR finish |
+| **Accessories** | Ski masks (hero) | **100% merino wool**; beanies in merino/lambswool blend |
+| | Bags (duffle / messenger) | coated Cordura / ripstop nylon, matte |
+| | Socks | combed-cotton rib, woven logo |
+
+**Matte finish is non-negotiable** on every fabric — peached / brushed / enzyme-washed, never glossy.
+
+#### Perceived-value levers (cheap signals of luxury — emphasise in renders + specs)
+- **Weight / GSM** — heft reads as quality; the single biggest signal.
+- **Deep, non-fading black** — garment / pigment dye for rich blacks.
+- **Gunmetal hardware** — matte-black YKK zips, engraved pullers, metal tags.
+- **Trims** — woven chip-mark label (§4.1), drawcord tips, branded eyelets; small, off-centre, never large logos.
+- **Subtle reflectivity** — black-out reflective yarn, iridescent seam membranes; activated only at glancing light angles, never high-vis.
+- **Packaging + hidden inner labels** that double as the NFC/SKU touchpoint (§5).
 
 ### 4.1 The chip mark — canonical placement and finish
 
@@ -314,9 +339,12 @@ cache-couture/
 ## 11. Canonical Prompt Fragments
 
 ### 11.1 Global Style Prefix
+Append the matching **tier material fragment** from `prompts/library.md` (§4 material map) so each
+render uses the correct fabric for its tier — e.g. Dailyware = heavyweight 100% cotton, Darkware =
+matte synthetic outerwear. Do not put synthetics on a Dailyware cotton piece.
 ```
 editorial fashion photography, Caché Couture, stealth black streetwear,
-matte technical fabrics, warm off-white seamless studio backdrop,
+matte premium fabrics, warm off-white seamless studio backdrop,
 soft even diffused front fill, full body frontal stance, hands at sides,
 neutral expression, frame from head to feet, no logos visible in background,
 monochromatic palette, subtle reflective yarn highlights, gunmetal hardware,
@@ -446,6 +474,9 @@ Place checkpoints in `ComfyUI\models\checkpoints\`, LoRAs in `ComfyUI\models\lor
 | `consistent_models/` | Operator drop folder — raw full-body portraits used to populate M01..M10 |
 | `.claude/consistency_pipeline.md` | Three-tier identity-consistency pipeline (Edit → bootstrap → LoRA) |
 | `ComfyUI/models/loras/cache/README.md` | LoRA registry — naming, stacking precedence, activation strengths |
+| `docs/shopify_migration.md` | **Shopify storefront** (`hiddencache.co.uk`, Dawn theme) — live product/collection/menu structure, decisions, outstanding work. Source of truth for the store. |
+| `docs/shopify_image_manifest.json` | Maps `/shopify` design files → Shopify products for image attachment |
+| `docs/shopify_store_backup_2026-06-27.json` | Pre-rebrand backup of the old No Apologies store |
 
 These files are the source of truth for visual identity and cast. Any LoRA training set must include the lookbook references; per-figure LoRAs must include the matching `brand/models/M##/training_set/`.
 

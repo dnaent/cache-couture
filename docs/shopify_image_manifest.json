@@ -1,0 +1,111 @@
+{
+  "_note": "Maps local /shopify design files to the Caché products created 2026-06-27. Use to attach images once an upload path is available (Shopify upload-image MCP tool, or bash internet egress for staged uploads -> productCreateMedia). First image in each list = featured. 'variant' indicates which colour/motif variant the image depicts, for optional per-variant image assignment.",
+  "image_root": "/Users/Phantom/Desktop/DNAENT™/Caché_Couture/shopify",
+  "unused_files": ["hero.png", "hero 2.png", "hero 3.jpg (theme banner / hero candidates, not products)"],
+  "products": [
+    {"productId": "gid://shopify/Product/10295709991233", "title": "Core Tee", "images": [
+      {"file": "core black.png", "role": "front", "variant": "Black"},
+      {"file": "core black back.png", "role": "back", "variant": "Black"},
+      {"file": "core black 2.png", "role": "alt-front", "variant": "Black"},
+      {"file": "core black 2 back.png", "role": "alt-back", "variant": "Black"},
+      {"file": "core white.png", "role": "front", "variant": "White"},
+      {"file": "core white back.png", "role": "back", "variant": "White"},
+      {"file": "core white 2.png", "role": "alt-front", "variant": "White"},
+      {"file": "core white 2 back.png", "role": "alt-back", "variant": "White"}
+    ]},
+    {"productId": "gid://shopify/Product/10295710089537", "title": "Gradient Tee", "images": [
+      {"file": "core gradient blue tee.png", "role": "front", "variant": "Blue"},
+      {"file": "core gradient blue tee back.png", "role": "back", "variant": "Blue"},
+      {"file": "core gradient green tee.png", "role": "front", "variant": "Green"},
+      {"file": "core gradient green tee back.png", "role": "back", "variant": "Green"},
+      {"file": "core gradient red tee.png", "role": "front", "variant": "Red"},
+      {"file": "core gradient red tee back.png", "role": "back", "variant": "Red"},
+      {"file": "core gradient blue black tee.png", "role": "front", "variant": "Blue / Black"},
+      {"file": "core gradient blue black tee back.png", "role": "back", "variant": "Blue / Black"},
+      {"file": "core gradient green black tee.png", "role": "front", "variant": "Green / Black"},
+      {"file": "core gradient green black tee back.png", "role": "back", "variant": "Green / Black"},
+      {"file": "core gradient red black tee.png", "role": "front", "variant": "Red / Black"},
+      {"file": "core gradient red black tee back.png", "role": "back", "variant": "Red / Black"}
+    ]},
+    {"productId": "gid://shopify/Product/10295710155073", "title": "Core Tracksuit", "images": [
+      {"file": "core black tracksuit.png", "role": "front", "variant": "Black"},
+      {"file": "core black tracksuit back.png", "role": "back", "variant": "Black"},
+      {"file": "core black tracksuit 2.png", "role": "alt-front", "variant": "Black"},
+      {"file": "core grey tracksuit.png", "role": "front", "variant": "Grey"},
+      {"file": "core grey tracksuit back.png", "role": "back", "variant": "Grey"},
+      {"file": "core navy tracksuit.png", "role": "front", "variant": "Navy"},
+      {"file": "core navy tracksuit back.png", "role": "back", "variant": "Navy"}
+    ]},
+    {"productId": "gid://shopify/Product/10295710253377", "title": "Gradient Tracksuit", "images": [
+      {"file": "core gradient black tracksuit.png", "role": "front", "variant": "Black"},
+      {"file": "core gradient blue tracksuit.png", "role": "front", "variant": "Blue"},
+      {"file": "core gradient green tracksuit.png", "role": "front", "variant": "Green"},
+      {"file": "core gradient red tracksuit.png", "role": "front", "variant": "Red"}
+    ]},
+    {"productId": "gid://shopify/Product/10295710187841", "title": "Core Bottoms", "images": [
+      {"file": "core black bottoms.png", "role": "front", "variant": "Black"},
+      {"file": "core black bottoms 2.png", "role": "alt-front", "variant": "Black"},
+      {"file": "core grey bottoms.png", "role": "front", "variant": "Grey"},
+      {"file": "core navy bottoms.png", "role": "front", "variant": "Navy"}
+    ]},
+    {"productId": "gid://shopify/Product/10295710286145", "title": "Gradient Bottoms", "images": [
+      {"file": "core gradient black bottoms.png", "role": "front", "variant": "Black"},
+      {"file": "core gradient blue bottoms.png", "role": "front", "variant": "Blue"},
+      {"file": "core gradient green bottoms.png", "role": "front", "variant": "Green"},
+      {"file": "core gradient red bottoms.png", "role": "front", "variant": "Red"}
+    ]},
+    {"productId": "gid://shopify/Product/10295710318913", "title": "Japan Sun Tee", "images": [
+      {"file": "japan sun tee.png", "role": "front", "variant": "White"},
+      {"file": "japan sun tee back.png", "role": "back", "variant": "White"},
+      {"file": "japan sun black tee.png", "role": "front", "variant": "Black"},
+      {"file": "japan sun black tee back.png", "role": "back", "variant": "Black"}
+    ]},
+    {"productId": "gid://shopify/Product/10295710384449", "title": "Japan Sun Tracksuit", "images": [
+      {"file": "japan sun black tracksuit.png", "role": "front", "variant": "Black"},
+      {"file": "japan sun black tracksuit back.png", "role": "back", "variant": "Black"}
+    ]},
+    {"productId": "gid://shopify/Product/10295710449985", "title": "Japan Sun Bottoms", "images": [
+      {"file": "japan sun black bottoms.png", "role": "front", "variant": "Black"}
+    ]},
+    {"productId": "gid://shopify/Product/10295710482753", "title": "Japan Wave Tracksuit", "images": [
+      {"file": "japan wave blue tracksuit.png", "role": "front", "variant": "Blue"},
+      {"file": "japan wave blue tracksuit back.png", "role": "back", "variant": "Blue"}
+    ]},
+    {"productId": "gid://shopify/Product/10295710515521", "title": "Japan Wave Bottoms", "images": [
+      {"file": "japan wave blue bottoms.png", "role": "front", "variant": "Blue"}
+    ]},
+    {"productId": "gid://shopify/Product/10295710548289", "title": "Japan Bamboo Tracksuit", "images": [
+      {"file": "japan bamboo black tracksuit.png", "role": "front", "variant": "Black"},
+      {"file": "japan bamboo black tracksuit back.png", "role": "back", "variant": "Black"}
+    ]},
+    {"productId": "gid://shopify/Product/10295710581057", "title": "Japan Bamboo Bottoms", "images": [
+      {"file": "japan bamboo black bottoms.png", "role": "front", "variant": "Black"}
+    ]},
+    {"productId": "gid://shopify/Product/10295710646593", "title": "Japan Cherry Tracksuit", "images": [
+      {"file": "japan cherry black tracksuit.png", "role": "front", "variant": "Black"},
+      {"file": "japan cherry black tracksuit back.png", "role": "back", "variant": "Black"}
+    ]},
+    {"productId": "gid://shopify/Product/10295710679361", "title": "Japan Cherry Bottoms", "images": [
+      {"file": "japan cherry black bottoms.png", "role": "front", "variant": "Black"}
+    ]},
+    {"productId": "gid://shopify/Product/10295710744897", "title": "Tag Hoodie", "images": [
+      {"file": "tag hoodie.png", "role": "front", "variant": "Black"},
+      {"file": "tag hoodie  back.png", "role": "back", "variant": "Black"}
+    ]},
+    {"productId": "gid://shopify/Product/10295710810433", "title": "Tag Bottoms", "images": [
+      {"file": "tag bottoms.png", "role": "front", "variant": "Black"}
+    ]},
+    {"productId": "gid://shopify/Product/10295710843201", "title": "Tag Tee", "images": [
+      {"file": "black tag tee.png", "role": "front", "variant": "Black"},
+      {"file": "black tag tee back.png", "role": "back", "variant": "Black"},
+      {"file": "white tag tee.png", "role": "front", "variant": "White"},
+      {"file": "white tag tee back.png", "role": "back", "variant": "White"}
+    ]},
+    {"productId": "gid://shopify/Product/10295750787393", "title": "Ski Mask Black", "images": [
+      {"file": "black tag mask.png", "role": "front", "variant": "Black"}
+    ]},
+    {"productId": "gid://shopify/Product/10295750820161", "title": "Ski Mask Blue", "images": [
+      {"file": "blue tag mask.png", "role": "front", "variant": "Blue"}
+    ]}
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "_note": "Backup of the No Apologies store state captured 2026-06-27 before the Cache rebrand migration. Source: Shopify MCP search_products / search_collections on store hiddencache.co.uk (Cache, Basic plan, GBP).",
+  "shop": {
+    "name": "Caché",
+    "domain": "hiddencache.co.uk",
+    "email": "contact@dnaent.co.uk",
+    "plan": "Basic",
+    "currency": "GBP",
+    "country": "United Kingdom"
+  },
+  "products": [
+    {"id": "gid://shopify/Product/8092256239937", "title": "Definition T-Shirt Black", "handle": "definition-black-tee", "status": "DRAFT", "productType": "T-Shirt", "vendor": "No Apologies", "price": "35.00", "variants": 4, "featuredImage": "https://cdn.shopify.com/s/files/1/0677/8834/1569/products/Collection-DefinitionBlackTeeFront.jpg?v=1673907077"},
+    {"id": "gid://shopify/Product/8092260729153", "title": "Definition T-Shirt White", "handle": "definition-white-tee", "status": "DRAFT", "productType": "T-Shirt", "vendor": "No Apologies", "price": "35.00", "variants": 4, "featuredImage": "https://cdn.shopify.com/s/files/1/0677/8834/1569/products/Collection-DefinitionWhiteTeeFront.jpg?v=1673907216"},
+    {"id": "gid://shopify/Product/8092268003649", "title": "Definition Tracksuit Navy", "handle": "definition-tracksuit-navy", "status": "DRAFT", "productType": "Tracksuit", "vendor": "No Apologies", "price": "160.00", "variants": 4, "featuredImage": "https://cdn.shopify.com/s/files/1/0677/8834/1569/products/Collection-DefinitionBlueTracksuitFront.jpg?v=1673907583"},
+    {"id": "gid://shopify/Product/8092273017153", "title": "Definition Tracksuit Grey", "handle": "definition-tracksuit-grey", "status": "DRAFT", "productType": "Tracksuit", "vendor": "No Apologies", "price": "160.00", "variants": 4, "featuredImage": "https://cdn.shopify.com/s/files/1/0677/8834/1569/products/Collection-DefinitionGreyTracksuitFront.jpg?v=1673907569"},
+    {"id": "gid://shopify/Product/8092276359489", "title": "Definition Tracksuit Black", "handle": "definition-tracksuit-black", "status": "ACTIVE", "productType": "Tracksuit", "vendor": "No Apologies", "price": "160.00", "variants": 4, "featuredImage": "https://cdn.shopify.com/s/files/1/0677/8834/1569/products/Collection-DefinitionBlackTracksuitFront.jpg?v=1673907660"},
+    {"id": "gid://shopify/Product/8092290056513", "title": "Graffiti T-Shirt Black", "handle": "graffiti-t-shirt-black", "status": "DRAFT", "productType": "T-Shirt", "vendor": "No Apologies", "price": "35.00", "variants": 4, "featuredImage": "https://cdn.shopify.com/s/files/1/0677/8834/1569/products/Collection-GraffitiBlackTeeFront.jpg?v=1673907989"},
+    {"id": "gid://shopify/Product/8092292907329", "title": "Graffiti T-Shirt White", "handle": "graffiti-t-shirt-white", "status": "DRAFT", "productType": "T-Shirt", "vendor": "No Apologies", "price": "35.00", "variants": 4, "featuredImage": "https://cdn.shopify.com/s/files/1/0677/8834/1569/products/Collection-GraffitiWhiteTeeFront.jpg?v=1673908053"},
+    {"id": "gid://shopify/Product/8092303098177", "title": "Graffiti Ski Mask", "handle": "graffiti-ski-mask", "status": "ACTIVE", "productType": "Mask", "vendor": "No Apologies", "price": "30.00", "variants": 1, "featuredImage": "https://cdn.shopify.com/s/files/1/0677/8834/1569/files/Collection-DefinitionMaskFront.jpg?v=1685965763"},
+    {"id": "gid://shopify/Product/8092308144449", "title": "Staple Tracksuit Black", "handle": "staple-tracksuit-black", "status": "DRAFT", "productType": "Tracksuit", "vendor": "No Apologies", "price": "160.00", "variants": 4, "featuredImage": "https://cdn.shopify.com/s/files/1/0677/8834/1569/products/Collection-StapleTracksuitBlackFront.jpg?v=1673992059"},
+    {"id": "gid://shopify/Product/8092315124033", "title": "Staple Anchor Tracksuit Grey", "handle": "staple-anchor-tracksuit-grey", "status": "DRAFT", "productType": "Tracksuit", "vendor": "No Apologies", "price": "160.00", "variants": 4, "featuredImage": "https://cdn.shopify.com/s/files/1/0677/8834/1569/products/Collection-StapleAnchorTracksuitGreyFront.jpg?v=1673908530"}
+  ],
+  "collections": [
+    {"id": "gid://shopify/Collection/434617745729", "title": "Definition", "handle": "definition", "type": "smart", "rule": "TITLE CONTAINS Definition", "productsCount": 5},
+    {"id": "gid://shopify/Collection/434619416897", "title": "Graffiti", "handle": "graffiti", "type": "smart", "rule": "TITLE CONTAINS Graffiti", "productsCount": 3},
+    {"id": "gid://shopify/Collection/434619908417", "title": "Staple", "handle": "staple", "type": "smart", "rule": "TITLE CONTAINS Staple", "productsCount": 2},
+    {"id": "gid://shopify/Collection/434873598273", "title": "Tracksuits", "handle": "tracksuits", "type": "smart", "rule": "PRODUCT_TAXONOMY_NODE_ID EQUALS 183", "productsCount": 5},
+    {"id": "gid://shopify/Collection/434874057025", "title": "T-Shirts", "handle": "t-shirts", "type": "smart", "rule": "PRODUCT_TAXONOMY_NODE_ID EQUALS 174", "productsCount": 4},
+    {"id": "gid://shopify/Collection/434879725889", "title": "Accessories", "handle": "accessories", "type": "smart", "rule": "PRODUCT_TAXONOMY_NODE_ID EQUALS 320", "productsCount": 1}
+  ]
+}

@@ -12,7 +12,7 @@ class Settings(BaseSettings):
 
     # Shopify
     shopify_store_domain: str = "hiddencache.co.uk"
-    shopify_myshopify_domain: str = "hiddencache.myshopify.com"
+    shopify_myshopify_domain: str = "no-apologies-5.myshopify.com"
     shopify_admin_api_token: str = ""
     shopify_webhook_secret: str = ""
 

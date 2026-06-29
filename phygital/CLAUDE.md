@@ -58,6 +58,46 @@ unbranded **accessories** (optional hybrid: generic Alibaba dropship app for tho
 
 Target batch sizes: ~50–150 units per style/colour, repeat batches (see RFQ §B6).
 
+### 2.2 POD / OEM split + sourcing progress (2026-06-29)
+
+The reflective woven label (mirrored `CACHÉ` / `HIDDEN / APPROVAL`, §2.1 device, half black-satin /
+half reflective silver) is a **non-negotiable brand signature**. POD providers cannot sew in a
+third-party reflective woven label, so any product carrying it must be OEM. Resulting split:
+
+- **POD track (Apliiq / Printful — Shopify-native, per-order, no custom code):** Core, Gradient, and
+  **Japan** (motifs as DTG placement prints on heavyweight 100% cotton blanks). Decoration-on-blank;
+  accepts printed-not-woven motif as the accessible-tier compromise.
+- **OEM track (custom cut-and-sew, low batch + 3PL or order API):** **Tag Collection** + the
+  **2-in-1 convertible mask** — these carry the reflective woven tag + (mask) merino + NFC.
+
+**Decoration by tier — Option B, LOCKED 2026-06-29:** reflective embroidery + the reflective woven
+label are the **Tag/mask top-tier signature only**. **Core / Gradient / Japan use NON-reflective
+decoration** so they stay POD: Core = tonal embroidered chip-mark; Gradient = gradient-thread
+embroidered wordmark; Japan = **DTG-printed** motifs + tonal-embroidered CACHÉ branding. (Operator
+originally specced screen-print for Japan motifs; defaulted to **DTG** to keep Japan POD — switching
+Japan motifs back to screen-print would move Japan to the OEM batch track.)
+
+**Phygital delivery (revised 2026-06-29):** moved from woven-chip / NFC-in-garment to a
+**procedurally-generated NFT card** included with every order (POD + OEM alike) — decouples phygital
+from manufacturing so every garment carries it. Recommended mechanism: a generic premium "claim"
+card (QR) + server-side per-order NFT tethered to the SKU (the service already maps SKU→token);
+uniqueness is digital, not per-card. (Woven chip-mark + reflective label become a Tag/mask-tier detail.)
+
+**Sourced suppliers (operator, 2026-06-29):**
+- **Dongguan Kangduo Clothing Co., Ltd.** — **knitwear only**: merino brushed 2-in-1 mask (+ knitted
+  beanies if added). Cannot do cut-and-sew apparel.
+- **Dongguan Neon Garment Accessories Co., Ltd.** — reflective woven labels (Tag/mask tier).
+- **Cut-and-sew apparel OEM — STILL TO SOURCE** — makes the Tag hoodie/joggers/tees and sews in
+  Neon's labels. Needs: heavyweight 100% cotton, accepts brand-supplied reflective labels, low MOQ.
+- Flow: Neon produces labels → ships to each garment maker (Kangduo + apparel OEM) → sewn in.
+
+**Status of open items:**
+1. ✅ Reflective label scope = **Tag/mask premium tier only**; Core/Gradient/Japan use standard
+   (non-reflective) neck labels → **POD stays on** for those.
+2. ⚠️ **Source a cut-and-sew apparel OEM** for the Tag apparel (Kangduo is knitwear only).
+3. ⏳ **Order handoff (RFQ Q3):** does each OEM/3PL expose a per-order API or accept a CSV/feed? That
+   answer is what `forward_order` (`app/alibaba.py`) gets wired to. POD track needs no wiring.
+
 ---
 
 ## 3. Current State (2026-06-27)

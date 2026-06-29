@@ -140,39 +140,58 @@ tier, never put synthetics on a Dailyware cotton piece.
 - **Gunmetal hardware** — matte-black YKK zips, engraved pullers, metal tags.
 - **Trims** — woven chip-mark label (§4.1), drawcord tips, branded eyelets; small, off-centre, never large logos.
 - **Subtle reflectivity** — black-out reflective yarn, iridescent seam membranes; activated only at glancing light angles, never high-vis.
-- **Packaging + hidden inner labels** that double as the NFC/SKU touchpoint (§5).
+- **Packaging + the NFT card** (§5) included with every order — the phygital touchpoint + unboxing moment.
 
-### 4.1 The chip mark — canonical placement and finish
+### 4.1 The chip mark — placement and finish (tiered)
 
-The Caché chip symbol (CLAUDE.md §2.1) is **woven directly into the garment fabric** — *not* applied as a separate stitched-on label patch. It appears at exactly four canonical positions:
+The Caché chip symbol (§2.1) is a brand **motif**, executed differently by tier (production reality):
 
-1. Back of the hood, centred just below the hood crown seam.
-2. Back-right trouser pocket.
-3. Halfway up the right trouser leg, outer side.
-4. Halfway up the left arm sleeve, outer side.
+- **Premium / OEM tier (Tag Collection + masks):** **woven directly into the garment fabric** (not a
+  stitched-on patch) — the true signature. Finishes: **subtle reflective yarn** (primary; a soft grey
+  tonal whisper on black that flashes cool silver only at a glancing angle — never stark white-on-black),
+  or an **engraved gunmetal plate** (sparing). These pieces also carry the reflective woven CACHÉ label.
+- **Accessible / POD tier (Core / Gradient / Japan):** applied as **tonal embroidery or DTG print**
+  (POD providers do both per order). Woven-into-fabric is *not* available on POD blanks — embroidery is
+  the closest premium execution.
 
-Two canonical finishes:
+Preferred placements (premium tier, where applied): 1) back of hood below the crown seam; 2) back-right
+trouser pocket; 3) halfway up the right outer leg; 4) halfway up the left outer sleeve. On POD tees /
+tracksuits, a single small tonal chest or sleeve placement is typical.
 
-- **Subtle reflective yarn** (primary) — the embroidery reads as a **soft grey or light-grey tonal whisper** against the black weave under even diffused light. Only when raking light catches the yarn at a glancing angle does the chip briefly flash as a clean cool silver. Never stark high-contrast white-on-black.
-- **Engraved gunmetal hardware plate** (sparing) — a small metal plate, used selectively in places where hardware reads better than embroidery.
-
-The chip is **very small** and **off-centre**. It rewards close attention; it should not announce itself from across a room. This is the physical signature of the Black Box (§1.4) — the visible counterpart to the NFC chip embedded in the inner label (§5).
+The chip mark is **very small** and **off-centre** — it rewards close attention, never announces across a
+room. It is a brand motif only: the **phygital touchpoint is the NFT card (§5)**, not the chip or an
+NFC-in-garment.
 
 ---
 
 ## 5. The Phygital Protocol
 
-Every physical Caché garment carries:
-- A unique **encrypted SKU**.
-- An embedded **NFC chip** or QR-encoded tag in the inner label.
-- A **1:1 tethered NFT** counterpart that auto-mints to the buyer's wallet at purchase.
+Phygital ownership is delivered via an **NFT card** — a premium card included with **every order**
+(POD and OEM alike), carrying a **procedurally-generated NFT** tethered to the item's unique
+**encrypted SKU**. This decouples the phygital layer from manufacturing, so every garment carries it
+regardless of how it was made. (Revised 2026-06-29 — replaces the earlier woven-chip / NFC-in-label model.)
+
+Mechanism:
+- **Generic premium card + digital claim.** The card is identical per design (a "claim" card with a QR);
+  uniqueness is digital — the phygital service generates the per-order NFT and maps SKU → tokenId
+  server-side. No per-order card printing, so it scales across POD + OEM.
+- **Status:** launching soon. The encrypted SKU reserves the buyer's 1:1 counterpart now; the claim/mint
+  goes live with the protocol. V1 ships without live minting.
 
 Rules:
-- **Tethered Ownership** — physical and digital cannot be separated. Selling the physical requires transferring the NFT; otherwise the item is "bricked" / de-authenticated.
-- **Authentication** — the NFT is the certificate of authenticity. Counterfeits cannot mint.
-- **Metaverse Skin** — the NFT renders as a wearable in supported metaverse platforms (Decentraland, The Sandbox, Roblox, Ready Player Me avatars).
+- **Authentication** — the NFT is the certificate of authenticity. Counterfeits cannot mint; only
+  genuine Caché pieces carry a tethered NFT.
+- **Tethered by default, separable by consent** — the NFT travels with the garment. Reselling without
+  the card voids the digital authentication **unless** seller and buyer deliberately agree to separate
+  them. Intentional flexibility: sell with the NFT (authenticated, higher value), without it (valid but
+  unauthenticated, lower value), or sell the NFT separately. Full terms live on the store page
+  **Phygital Ownership** (`/pages/phygital-ownership`).
+- **Metaverse skin** — the NFT renders as a wearable in supported metaverse platforms.
 
-Marketing must communicate this as the brand's flagship innovation, not a side feature.
+Note: the NFC-chip-in-label and woven-chip-in-fabric are **not** the phygital carrier — they're optional
+premium-tier (Tag / mask) brand details. The card is the universal phygital touchpoint.
+
+Marketing communicates this as the brand's flagship innovation.
 
 ---
 

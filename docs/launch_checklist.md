@@ -13,11 +13,13 @@ tracks: **POD** (Core/Gradient/Japan) and **OEM batch + 3PL** (Tag, masks, acces
 
 ## 1. Shopify apps (keep it lean — apps slow the store)
 **Install:**
-- [ ] **POD provider — pick ONE, prioritise UK fulfilment.** **Printful** (UK facility in Birmingham,
-      embroidery, strong branding) or **Inkthreadable** (UK-native, sustainable). Apliiq has great
-      streetwear blanks + woven neck labels but ships from the **US** (slower/pricier for UK orders).
-      Decision test for any of them: ① heavyweight 100% cotton, ② embroidery, ③ custom neck label,
-      ④ **UK fulfilment**. (Same provider can also do no-stock POD **socks**.)
+- [ ] **POD provider — DECISION: Printful** (chosen 2026-06-29). UK fulfilment (Wolverhampton) +
+      international coverage (fits the universal/global positioning); broadest catalogue (apparel + POD
+      socks/hats in one account); most reliable automation for a hands-off wheel; embroidery + custom
+      neck labels. *Fallback:* **Inkthreadable** (UK-native, cheaper UK-only, eco) — only if going
+      UK-only / marketing sustainability. Apliiq dropped (US fulfilment). **Before mapping all products:
+      order ONE sample** (heavyweight 100% cotton tee + embroidered wordmark + custom neck label) to
+      confirm hand-feel + embroidery quality. Same account also covers POD **socks**.
 - [ ] **Klaviyo** — email/SMS automation (welcome / abandoned-cart / post-purchase / win-back flows =
       passive revenue). Or start free with **Shopify Email**, upgrade later.
 - [ ] **Your 3PL's app** — once a 3PL is chosen (this is the OEM order handoff).

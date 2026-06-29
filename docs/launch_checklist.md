@@ -11,15 +11,27 @@ tracks: **POD** (Core/Gradient/Japan) and **OEM batch + 3PL** (Tag, masks, acces
 
 ---
 
-## 1. Shopify apps to install (keep it lean — apps slow the store)
-- [ ] **Apliiq** — POD fulfilment for Core / Gradient / Japan (App Store → install → connect store).
-- [ ] **(Optional) Printful** — only if you want no-stock POD **socks**.
-- [ ] **Your 3PL's app** — once a 3PL is chosen, install their Shopify integration (this is how OEM
-      orders route to fulfilment). e.g. ShipBob / Airhouse / a UK 3PL's own app.
-- [ ] **Email/marketing** — start with **Shopify Email** (free, built-in) or **Klaviyo** (better automation).
-- [ ] **Reviews** — Judge.me or Loox (social proof). Optional but high-value at launch.
-- [ ] Native (no app needed): **Shopify Markets** (international), **cookie-consent banner** (Settings →
-      Customer privacy), **Search & Discovery** (filters/recommendations).
+## 1. Shopify apps (keep it lean — apps slow the store)
+**Install:**
+- [ ] **POD provider — pick ONE, prioritise UK fulfilment.** **Printful** (UK facility in Birmingham,
+      embroidery, strong branding) or **Inkthreadable** (UK-native, sustainable). Apliiq has great
+      streetwear blanks + woven neck labels but ships from the **US** (slower/pricier for UK orders).
+      Decision test for any of them: ① heavyweight 100% cotton, ② embroidery, ③ custom neck label,
+      ④ **UK fulfilment**. (Same provider can also do no-stock POD **socks**.)
+- [ ] **Klaviyo** — email/SMS automation (welcome / abandoned-cart / post-purchase / win-back flows =
+      passive revenue). Or start free with **Shopify Email**, upgrade later.
+- [ ] **Your 3PL's app** — once a 3PL is chosen (this is the OEM order handoff).
+- [ ] **Reviews** — Judge.me or Loox (social proof). Optional but high-value.
+
+**Turn on:** **Shop** (Shop Pay accelerated checkout). **Native, no app:** Shopify Markets
+(international), cookie-consent (Settings → Customer privacy), Search & Discovery (filters).
+
+**Add once live (out of password):** **Google & YouTube** (free Google Shopping listings), **Pinterest**.
+
+**Ignore — wrong model (these are dropshipping/arbitrage, not a branded line):** DSers,
+Alibaba & AliExpress Dropship, CJdropshipping, Printify (aggregator, weak branding), Shopify
+Marketplace Connect (dilutes a stealth-luxury brand).
+
 - Phygital/NFT is **not an app** — it's your own service (`phygital/`), wired later.
 
 ---
@@ -118,3 +130,34 @@ Full spec to attach after their first reply: `phygital/docs/supplier_rfq.md`.
   method are known.
 - Build the **phygital NFT card** claim/mint flow when you switch it from "coming soon" to live.
 - Research **3PLs** / draft supplier comms / tidy product data on request.
+
+---
+
+## 9. Self-sustaining wheel — steady-state operations
+The end-state operating model. Once set up, these loops run with minimal intervention.
+
+### Automated loops (zero-touch)
+- **Order → fulfil → ship:**
+  - *POD items* (Core / Gradient / Japan): Shopify → POD app (Printful/Inkthreadable) → decorate → ship.
+  - *OEM items* (Tag / masks / accessories): Shopify → 3PL app → pick & pack (branded box + NFT card) → ship.
+- **Phygital:** `orders/paid` webhook → phygital service mints the tethered NFT + records SKU ↔ token.
+- **Marketing:** Klaviyo flows (welcome / abandoned-cart / post-purchase / win-back) fire on their own.
+- **Checkout / payments / tax / returns:** Shopify + the POD/3PL handle these per policy.
+
+### Human-in-the-loop (your role — by design, minimal)
+- **OEM supplier conversations** — new pieces, quality, pricing, relationships. *Your main involvement.*
+- **Batch reorders** — when an OEM/accessory item hits its **par level** at the 3PL, approve a reorder
+  PO → OEM produces a batch → ships to the 3PL. POD items never need this (no stock).
+- **Creative direction** — generate marketing / lookbook on the **3080 Ti / ComfyUI** (root `CLAUDE.md`
+  §4/§8 + `prompts/library.md`); schedule social posts.
+- **Light CS** — Shopify Inbox; most is automatable with saved replies + FAQ.
+
+### The trigger that keeps the wheel turning
+The **par-level reorder**. Track inventory on OEM items only → set low-stock alerts → a dip below par
+pings you → you approve the batch PO. That single recurring action (plus supplier chats) is the whole
+of your operational involvement. **Zero-touch:** POD fulfilment, phygital minting, marketing flows,
+checkout.
+
+### Cadence
+Check the Shopify dashboard ~weekly; act on **reorder alerts** and **supplier threads** as they arrive.
+Everything else turns by itself.

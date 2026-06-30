@@ -163,3 +163,21 @@ checkout.
 ### Cadence
 Check the Shopify dashboard ~weekly; act on **reorder alerts** and **supplier threads** as they arrive.
 Everything else turns by itself.
+
+---
+
+## 10. Accounts & infrastructure (reference — set up 2026-06-30)
+- **Email:** Google Workspace **user-alias domain** — `hiddencache.co.uk` added as an alias of the
+  primary `dnaent.co.uk`. Brand address **`contact@hiddencache.co.uk`** (mirrors `contact@dnaent.co.uk`,
+  same inbox; Gmail send-as enabled). Authenticated: **MX (Google 5-record set) + SPF + DKIM** — Gmail active.
+- **DNS — all at Squarespace.** Both domains are registered/managed at Squarespace, so **every DNS
+  record goes in the Squarespace DNS panel** (`Settings → Domains → hiddencache.co.uk → DNS`): email
+  (MX/SPF/DKIM), the Shopify storefront, Shopify email-auth CNAMEs, and Klaviyo CNAMEs. Google Admin
+  only *generates* the Google DKIM; it is *added* in Squarespace.
+  - **Storefront records (do NOT touch):** `A @ → 23.227.38.65` and `CNAME www → shops.myshopify.com`.
+- **Apps installed:** **Klaviyo** (email/SMS — sender `contact@hiddencache.co.uk`, needs its own
+  domain-auth CNAMEs in Squarespace) · **Printful** (POD). Apliiq uninstalled.
+- **Shopify transactional email:** authenticated via 6 Shopify CNAMEs (`*._domainkey`, `mailer*`) added
+  in Squarespace; sender `contact@hiddencache.co.uk`.
+- **Reminder:** new sending services (Klaviyo, Shopify) each add their **own** CNAMEs — always into
+  Squarespace; never touch the storefront A/CNAME.

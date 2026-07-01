@@ -38,16 +38,21 @@ Marketplace Connect (dilutes a stealth-luxury brand).
 
 ---
 
-## 2. POD track — Apliiq setup (Core / Gradient / Japan)
-- [ ] Create Apliiq account, install the Shopify app, connect the store.
-- [ ] Choose **heavyweight 100% cotton** blanks (tee ~240gsm; hoodie/jogger ~380–420gsm). Order **blank
-      samples** to check hand-feel.
-- [ ] Set decoration per collection: **embroidery** for the chip-mark/wordmark (tonal = Core; gradient
-      thread = Gradient); **DTG** for Japan motifs. Order a **decorated sample**.
+## 2. POD track — Printful setup (Core / Gradient / Japan)
+- [ ] Create **Printful** account, install the Shopify app, connect the store.
+- [ ] Choose **heavyweight 100% cotton** blanks. Tees are easy; **verify hoodies/joggers are 100% cotton**
+      (most POD fleece is an 80/20 cotton-poly blend) — see the open decision below. Order **blank samples**.
+- [ ] Set decoration: **embroidery** for the chip-mark/wordmark (tonal = Core); **Gradient wordmark = DTG**
+      (embroidery can't do a smooth colour gradient); **DTG** for Japan motifs. Order a **decorated sample**.
+- [ ] **Tracksuit = a Printful *bundle*** (hoodie + joggers as one Shopify product) — map as a bundle, not
+      a single item, or the customer won't receive both pieces.
 - [ ] Set up your **custom neck label** + pack-in slot (the NFT card goes here later).
-- [ ] Upload artwork; map Apliiq products onto your existing Shopify products + variants (sizes).
-- [ ] **Place a test order** — verify branding, quality, fulfilment, shipping before go-live.
-- Apliiq auto-fulfils per order — no custom code on this track.
+- [ ] Upload artwork; map Printful products onto your existing Shopify products + variants (sizes).
+- [ ] **Place a test order** — verify branding, quality, fulfilment before go-live.
+- Printful auto-fulfils per order — no custom code on this track. Same account covers POD **socks**.
+- **⚠ Open decision:** if you can't find a 100% cotton heavyweight hoodie/jogger you like → either accept a
+  cotton-rich blend for POD tracksuits (soften copy to "heavyweight cotton") **or** move tracksuits to OEM.
+  Tell Claude which and the product copy/metafields get updated to match.
 
 ---
 
@@ -86,17 +91,43 @@ Full spec to attach after their first reply: `phygital/docs/supplier_rfq.md`.
 
 ---
 
-## 4. Accessories OEM (premium tier — batch + 3PL, all Guangdong)
+## 4. Accessories OEM (premium tier — batch + 3PL; mostly Guangdong, socks = Zhejiang)
 | Accessory | Supplier type | Status |
 |---|---|---|
 | 2-in-1 masks, beanies | Knitwear OEM | ✅ Kangduo |
 | Reflective woven labels | Trim supplier | ✅ Neon |
 | Tag apparel + utility storage vests | Cut-and-sew apparel OEM | 🔍 sourcing (§3) |
-| Duffle / messenger bags / pouches | Bag / luggage OEM | ❌ to source |
-| Keyrings | Metal / promotional OEM (gunmetal, engraved) | ❌ to source |
-| Socks | Sock OEM (or Printful POD) | ❌ to source |
-- Source each specialist OEM the same way as §3 (Verified/Trade Assurance, Guangdong, samples, 3 Qs).
+| Duffle / messenger bags / pouches | Bag / luggage OEM | 🔍 shortlisted (§4.1) |
+| Keyrings | Metal / promotional OEM (gunmetal, engraved) | 🔍 shortlisted (§4.1) |
+| Socks | Sock OEM (or Printful POD) | 🔍 shortlisted (§4.1) |
+- Source each specialist OEM the same way as §3 (Verified/Trade Assurance, samples, the 3 questions).
 - All carry the reflective woven label where it fits → premium signature tier.
+
+### 4.1 Candidate shortlist (researched 2026-07-01 — starting points to vet on Alibaba, not endorsements)
+Verify each on Alibaba (**Verified Supplier / Trade Assurance**), request paid samples, and ask the **3
+make-or-break questions (§3.1)** before committing. Pay via Trade Assurance.
+
+**Bags — duffle / messenger / pouches (Guangdong):**
+- **Jundong Factory** (Guangdong) — OEM/ODM travel/duffel bags, private-label, low MOQ.
+- **Meyzy** — custom travel/duffle, MOQ ~50–300, fast sampling.
+- **OSGW Bag** (Guangdong) — custom backpacks/duffels/organisers.
+- General Alibaba messenger-bag OEMs run MOQ ~100–500. (Note: the luggage supply chain spans Guangdong + Hebei.)
+- Sources: [Jundong](https://jundongfactory.com/custom-travel-bags/) · [Meyzy](https://www.meyzy.com/solutions/travel-bag-manufacturer/) · [OSGW](https://www.osgwbag.com/)
+
+**Keyrings — metal / engraved (Guangdong):**
+- **Guangzhou Mingou Metal Products Co., Ltd.** (Guangzhou) — OEM metal keychains.
+- **Guangdong Jinyibao Arts & Crafts** (Shenzhen) — 20+ yrs metal keychains.
+- **Shenzhen Longzhiyu Crafts Co., Ltd.** — high-capacity metal keychain factory.
+- MOQ ~50 for basic **laser-engraving** (your gunmetal engraved keyring fits this band); 500+ only if a
+  bespoke mould is needed.
+- Sources: [Guangzhou Mingou](https://keychaincn.en.alibaba.com/) · [keychain roundup](https://www.leelinepromotion.com/keychain-manufacturers-in-china/)
+
+**Socks — ⚠ NOT Guangdong.** The hosiery hub is **Zhuji, Zhejiang** ("Hosiery Capital"), so socks break
+the same-province goal. Two options:
+- **Simplest: keep socks on Printful POD** — no separate supplier, no stock (recommended unless you want woven-branded socks).
+- **Or a Zhejiang sock OEM:** **Zhuji Niumai** (MOQ ~20 pairs, ≤1h response), **Haining Weidun Knitting**,
+  **Zhuji Jiahe / Qingyuan**. Typical MOQ 300–1000 (Niumai lower); samples ~$5–15, refundable.
+- Sources: [socks factory roundup](https://www.honouroceanshipping.com/top-20-china-socks-factory-socks-wholesale-manufacturers/)
 
 ---
 

@@ -39,20 +39,34 @@ Marketplace Connect (dilutes a stealth-luxury brand).
 ---
 
 ## 2. POD track — Printful setup (Core / Gradient / Japan)
-- [ ] Create **Printful** account, install the Shopify app, connect the store.
-- [ ] Choose **heavyweight 100% cotton** blanks. Tees are easy; **verify hoodies/joggers are 100% cotton**
-      (most POD fleece is an 80/20 cotton-poly blend) — see the open decision below. Order **blank samples**.
-- [ ] Set decoration: **embroidery** for the chip-mark/wordmark (tonal = Core); **Gradient wordmark = DTG**
-      (embroidery can't do a smooth colour gradient); **DTG** for Japan motifs. Order a **decorated sample**.
-- [ ] **Tracksuit = a Printful *bundle*** (hoodie + joggers as one Shopify product) — map as a bundle, not
-      a single item, or the customer won't receive both pieces.
-- [ ] Set up your **custom neck label** + pack-in slot (the NFT card goes here later).
-- [ ] Upload artwork; map Printful products onto your existing Shopify products + variants (sizes).
-- [ ] **Place a test order** — verify branding, quality, fulfilment before go-live.
-- Printful auto-fulfils per order — no custom code on this track. Same account covers POD **socks**.
-- **⚠ Open decision:** if you can't find a 100% cotton heavyweight hoodie/jogger you like → either accept a
-  cotton-rich blend for POD tracksuits (soften copy to "heavyweight cotton") **or** move tracksuits to OEM.
-  Tell Claude which and the product copy/metafields get updated to match.
+**Printful selling region = Europe/UK** (set 2026-07-01) so blanks fulfil from the EU/UK facility (fast, no customs).
+
+**Locked blanks (EU catalogue, UK-fulfilled):**
+- **Tee — Cotton Heritage MC1087 "Box Tee":** 100% combed ring-spun cotton, 7oz/237gsm, oversized boxy
+  drop-shoulder, **tear-away tag** (clean for the custom neck label), embroidery + DTG. ✅
+- **Hoodie — Stanley/Stella STSU177 "Cruiser 2.0" (EU version):** **100% organic cotton**, 350gsm brushed
+  fleece, metal-tipped drawcords + metal eyelets, GOTS-certified, embroidery + DTG. ✅
+  - ⚠ Must use the **EU code STSU177** — the NA code **SASU003 is 80/20** cotton/poly. Set region to Europe.
+- **Socks:** Printful POD. ✅
+
+**Bottoms — PENDING (2026-07-01).** No matching 100% cotton, UK-fulfilled jogger exists in Printful's EU
+catalogue — every 100% cotton jogger found (Comfort Colors 1469, Lane Seven LS16006) is **US-fulfilled**,
+which would split the tracksuit bundle. **Operator has asked Printful to source a matching bottom for
+STSU177** (100% cotton, ~350gsm, metal hardware, EU-fulfilled).
+- **If Printful adds it →** tracksuit stays fully POD-UK.
+- **Fallback (if they decline/delay) →** move **tracksuits to OEM** (POD = tees only; OEM = tracksuits +
+  Tag + masks). The STSU177 spec (350gsm, 100% organic cotton, metal hardware) = the OEM benchmark.
+- Do **not** let this gate launch — keep the OEM apparel sourcing (§3) moving as the fallback.
+
+**Setup steps (once bottoms resolved):**
+- [ ] Install the Printful Shopify app, connect the store (region = Europe).
+- [ ] Decoration: **embroidery** for the chip-mark/wordmark (tonal = Core); **Gradient wordmark = DTG**
+      (embroidery can't do a smooth gradient); **DTG** for Japan motifs.
+- [ ] **Tracksuit = a Printful *bundle*** (hoodie + joggers as one Shopify product).
+- [ ] Set up the **custom neck label** + NFT-card pack-in slot.
+- [ ] Order **samples**; map products onto Shopify + variants; **test order** before go-live.
+- Printful auto-fulfils per order — no custom code. Hoodie copy can now read **"100% organic cotton,
+  350gsm, GOTS-certified"**; full tracksuit copy waits until the bottoms are confirmed.
 
 ---
 

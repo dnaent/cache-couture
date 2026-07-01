@@ -99,7 +99,7 @@ Full spec to attach after their first reply: `phygital/docs/supplier_rfq.md`.
 | Tag apparel + utility storage vests | Cut-and-sew apparel OEM | 🔍 sourcing (§3) |
 | Duffle / messenger bags / pouches | Bag / luggage OEM | 🔍 shortlisted (§4.1) |
 | Keyrings | Metal / promotional OEM (gunmetal, engraved) | 🔍 shortlisted (§4.1) |
-| Socks | Sock OEM (or Printful POD) | 🔍 shortlisted (§4.1) |
+| Socks | **Printful POD** | ✅ decided |
 - Source each specialist OEM the same way as §3 (Verified/Trade Assurance, samples, the 3 questions).
 - All carry the reflective woven label where it fits → premium signature tier.
 
@@ -122,12 +122,10 @@ make-or-break questions (§3.1)** before committing. Pay via Trade Assurance.
   bespoke mould is needed.
 - Sources: [Guangzhou Mingou](https://keychaincn.en.alibaba.com/) · [keychain roundup](https://www.leelinepromotion.com/keychain-manufacturers-in-china/)
 
-**Socks — ⚠ NOT Guangdong.** The hosiery hub is **Zhuji, Zhejiang** ("Hosiery Capital"), so socks break
-the same-province goal. Two options:
-- **Simplest: keep socks on Printful POD** — no separate supplier, no stock (recommended unless you want woven-branded socks).
-- **Or a Zhejiang sock OEM:** **Zhuji Niumai** (MOQ ~20 pairs, ≤1h response), **Haining Weidun Knitting**,
-  **Zhuji Jiahe / Qingyuan**. Typical MOQ 300–1000 (Niumai lower); samples ~$5–15, refundable.
-- Sources: [socks factory roundup](https://www.honouroceanshipping.com/top-20-china-socks-factory-socks-wholesale-manufacturers/)
+**Socks — ✅ DECIDED: Printful POD** (2026-07-01). Kept on Printful (no separate supplier, no stock)
+rather than a sock OEM — simplest, and the sock hub is Zhuji/Zhejiang anyway (outside Guangdong).
+Revisit a Zhejiang sock OEM (e.g. **Zhuji Niumai**, MOQ ~20 pairs) only if you later want woven-branded
+socks. Source if needed: [socks factory roundup](https://www.honouroceanshipping.com/top-20-china-socks-factory-socks-wholesale-manufacturers/)
 
 ---
 

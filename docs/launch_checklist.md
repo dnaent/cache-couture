@@ -152,6 +152,15 @@ rather than a sock OEM — simplest, and the sock hub is Zhuji/Zhejiang anyway (
 Revisit a Zhejiang sock OEM (e.g. **Zhuji Niumai**, MOQ ~20 pairs) only if you later want woven-branded
 socks. Source if needed: [socks factory roundup](https://www.honouroceanshipping.com/top-20-china-socks-factory-socks-wholesale-manufacturers/)
 
+### 4.2 Accessory OEM chat opener (bags / keyrings — paste this)
+> Hello — we're a UK streetwear brand (Caché) sourcing premium accessories for a stealth-luxury line, in
+> small recurring batches (MOQ ~50–100). We're interested in [**duffle & messenger bags + utility pouches**
+> / **engraved metal keyrings** — pick per supplier], all in **matte black**. Before samples, please confirm:
+> 1. Can you produce in **matte black** with **gunmetal / matte-black hardware** (zips, engraved metal pullers/plates)?
+> 2. Will you apply our **brand-supplied reflective woven label** (bags) / **laser-engrave our logo** (keyrings)?
+> 3. For fulfilment — can you **ship batches to our UK 3PL**? (A per-order API or CSV feed is a bonus.)
+> Please also send: factory profile, certifications, MOQ tiers, price tiers, lead times, and sample policy. Thank you.
+
 ---
 
 ## 5. 3PL / fulfilment (the OEM order handoff)
@@ -178,6 +187,32 @@ socks. Source if needed: [socks factory roundup](https://www.honouroceanshipping
       covers** (1600×2000) + link the **Phygital Ownership** page in the footer.
 - [ ] **Test orders end-to-end** — one POD, one OEM — verify fulfilment + branding + the NFT card.
 - [ ] **Remove the storefront password.** 🚀
+
+### 7.1 Shipping policy — draft (paste into Settings → Policies → Shipping policy)
+Fill the `[bracketed]` values once POD/OEM production + 3PL dispatch times are locked.
+
+> **SHIPPING**
+>
+> Caché pieces are produced to order and dispatched from our fulfilment partners.
+>
+> **Processing.** Most items are made on demand. Please allow **[2–5] business days** for production
+> before dispatch. Made-to-order and pre-order pieces may take longer; any extended timeline is noted on
+> the product page.
+>
+> **Dispatch & delivery** (estimates begin once dispatched, not at time of order):
+> - United Kingdom: **[2–4] business days** via tracked courier.
+> - Europe: **[5–10] business days**.
+> - Rest of world: **[7–15] business days**.
+>
+> **Tracking.** A tracking link is emailed once your order is dispatched.
+>
+> **Customs & duties.** International orders may incur import duties or taxes set by the destination
+> country; these are the recipient's responsibility.
+>
+> **Address accuracy.** Please ensure your address is correct at checkout — we can't be responsible for
+> orders delivered to an incorrectly entered address.
+>
+> **Questions.** contact@hiddencache.co.uk
 
 ---
 

@@ -92,14 +92,25 @@ STSU177** (100% cotton, ~350gsm, metal hardware, EU-fulfilled).
 3. **Order handoff** — do you offer a **per-order fulfilment API**, accept a **CSV/order feed**, or
    **ship batches to our 3PL**? (This decides how the store auto-links to fulfilment.)
 
-### 3.2 Alibaba chat opener (paste this)
-> Hello — we're a UK streetwear brand (Caché) sourcing a long-term cut-and-sew OEM partner for
-> heavyweight 100% cotton apparel (hoodies, joggers, tees, utility vests), small recurring batches
-> (MOQ ~50/style). Before samples, please confirm: (1) Can you decorate via embroidery and/or
-> DTG/screen-print on 100% cotton? We do not want polyester sublimation. (2) Will you sew in our
-> brand-supplied reflective woven labels and NFC labels? (3) For fulfilment — do you offer a per-order
-> API, accept a CSV/order feed, or ship batches to our 3PL? Please also send your factory profile,
-> certifications, MOQ tiers, lead times, and sample policy. Thank you.
+### 3.2 Alibaba chat opener — combined Tag + tracksuit RFQ (paste this)
+> Hello — we're a UK streetwear brand (Caché) looking for a long-term cut-and-sew OEM partner for
+> heavyweight **100% cotton** apparel: **tracksuits (matched hooded top + joggers), tees, and utility
+> vests**, in small recurring batches (MOQ ~50/style).
+>
+> Our tracksuit **benchmark** is the **Stanley/Stella Cruiser 2.0 (STSU177)**: 100% (organic) cotton,
+> ~350gsm brushed-back fleece, metal-tipped drawcords and matte metal eyelets, premium heavyweight
+> hand. We want a matched hoodie + jogger to this standard (we can share the spec sheet / a sample).
+>
+> Before samples, please confirm:
+> 1. Can you decorate via **embroidery** and/or **DTG / screen-print on 100% cotton**? We do NOT want polyester sublimation.
+> 2. Will you sew in our **brand-supplied reflective woven neck labels** (and NFC labels, if supplied)?
+> 3. For fulfilment — do you offer a **per-order API**, accept a **CSV/order feed**, or **ship batches to our UK 3PL**?
+>
+> Please also send: factory profile, certifications (BSCI / WRAP / OEKO-TEX / GOTS), MOQ tiers
+> (50 / 100 / 250), price tiers, lead times, and your sample policy. Thank you.
+
+Tip: attach the **Stanley/Stella STSU177 spec sheet** (or post a sample) so candidates quote to the exact
+tracksuit standard — it removes ambiguity and gives you comparable quotes.
 
 Full spec to attach after their first reply: `phygital/docs/supplier_rfq.md`.
 

@@ -175,9 +175,18 @@ Everything else turns by itself.
   (MX/SPF/DKIM), the Shopify storefront, Shopify email-auth CNAMEs, and Klaviyo CNAMEs. Google Admin
   only *generates* the Google DKIM; it is *added* in Squarespace.
   - **Storefront records (do NOT touch):** `A @ → 23.227.38.65` and `CNAME www → shops.myshopify.com`.
-- **Apps installed:** **Klaviyo** (email/SMS — sender `contact@hiddencache.co.uk`, needs its own
-  domain-auth CNAMEs in Squarespace) · **Printful** (POD). Apliiq uninstalled.
-- **Shopify transactional email:** authenticated via 6 Shopify CNAMEs (`*._domainkey`, `mailer*`) added
-  in Squarespace; sender `contact@hiddencache.co.uk`.
-- **Reminder:** new sending services (Klaviyo, Shopify) each add their **own** CNAMEs — always into
-  Squarespace; never touch the storefront A/CNAME.
+- **Apps installed:** **Klaviyo** (email/SMS) · **Printful** (POD). Apliiq uninstalled.
+- **Klaviyo config (2026-07-01):** sender `Caché` / `contact@hiddencache.co.uk`; Shopify integration
+  connected. **Using Klaviyo's DEFAULT sending domain — NO branded sending domain** (deliberate: it's a
+  volume optimisation, revisit at scale; avoids the NS-delegation complexity). Klaviyo auto-created
+  **7 flows** (Welcome email + SMS, Abandoned Checkout, Browse Abandonment, Winback, Thank You,
+  Post-Purchase) + **4 editorial campaign drafts** — all on-brand, awaiting customisation. Paste-ready
+  flow/email copy in Caché voice: **`docs/klaviyo_flows.md`**. **Priority: build the waitlist signup
+  form + Welcome flow now** (pre-launch list-building while password-protected).
+- **Shopify transactional email:** authenticated via 6 Shopify CNAMEs (`*._domainkey`, `mailer*`) in
+  Squarespace; sender `contact@hiddencache.co.uk`.
+- **Policy URLs (branded, live at launch):** `hiddencache.co.uk` + `/policies/privacy-policy`,
+  `/policies/terms-of-service`, `/policies/refund-policy`, `/policies/shipping-policy` (⚠ still the
+  one-line placeholder — flesh out once dispatch times known), `/policies/contact-information`.
+- **DNS rule:** every record (email, Shopify, future Klaviyo) goes in **Squarespace**; never touch the
+  storefront `A @ → 23.227.38.65` / `CNAME www → shops.myshopify.com`.
